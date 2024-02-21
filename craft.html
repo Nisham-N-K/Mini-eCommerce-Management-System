@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce Management System</title>
+    <link rel="stylesheet" href="craft.css">
+    <style>
+        /* Add the CSS code provided previously */
+        /* Add any additional styling for the success message here */
+        
+        .success-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .cart,
+        #order-submit-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: auto;
+            max-width: auto;
+            height: auto;
+            /* Adjust height as needed */
+            margin: 0 auto;
+            /* Center horizontally */
+            box-sizing: border-box;
+            /* Include padding in height calculation */
+        }
+        
+        #cart-total,
+        #order-submit {
+            font-weight: bold;
+        }
+        
+        #order-submit {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+        
+        #order-submit:hover {
+            background-color: #0056b3;
+        }
+        /* Add media query for smaller screens */
+        
+        @media screen and (max-width: 768px) {
+            .cart,
+            #order-submit-container {
+                width: 100%;
+                max-width: none;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="product-list" class="product-list">
+            <div class="product" data-id="1">
+                <img src="products/headphone.jpg" alt="Headphone">
+                <h3>Headphone</h3>
+                <p>$20</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="2">
+                <img src="products/iphone.png" alt="iPhone 12">
+                <h3>iPhone 12</h3>
+                <p>$100</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="10">
+                <img src="products/ladiesbag.jpg" alt="Product 3">
+                <h3>Ladies Bag</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="4">
+                <img src="products/bag.jpg" alt="Product 4">
+                <h3>Bag</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="5">
+                <img src="products/chair.jpg" alt="Product 5">
+                <h3>Modern Chair</h3>
+                <p>$10</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="6">
+                <img src="products/girlsdress.jpg" alt="Product 7">
+                <h3>Girls Dress</h3>
+                <p>$5</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="7">
+                <img src="products/cup.jpg" alt="Product 1">
+                <h3>Cup</h3>
+                <p>$3</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="8">
+                <img src="products/gensshirt.jpg" alt="iPhone">
+                <h3>Gens Shirt</h3>
+                <p>$7</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="9">
+                <img src="products/hplap.jpg" alt="Product 3">
+                <h3>HP Laptop</h3>
+                <p>$40</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="3">
+                <img src="products/headphone2.jpg" alt="Product 9">
+                <h3>Headphone</h3>
+                <p>$20</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="11">
+                <img src="products/pen.jpg" alt="iPhone">
+                <h3>Pen</h3>
+                <p>$1</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="product" data-id="12">
+                <img src="products/potato.jpg" alt="Product 3">
+                <h3>Potato</h3>
+                <p>$2</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div id="product-list" class="product-list">
+                <!-- Product cards -->
+            </div>
+
+            <div id="cart" class="cart">
+                <!-- Shopping cart content -->
+                <h2>Shopping Cart</h2>
+                <ul id="cart-items" class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </ul>
+                <h2>Total: $<span id="cart-total">0</span></h2>
+                <!-- Submit order button -->
+                <button id="order-submit">Submit Order</button>
+            </div>
+        </div>
+
+        <script src="ceaft.js"></script>
+</body>
+
+</html>
