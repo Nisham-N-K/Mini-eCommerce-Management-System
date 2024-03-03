@@ -25,7 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             alert('Order placed successfully!')
             alert(`Your Tottal Bill: $${total}`);
-            // Implement your checkout logic here
         }
     });
 });
+
+function submitOrder() {
+
+    // Redirect to a new HTML page
+    window.location.href = "dashbord.html";
+}
