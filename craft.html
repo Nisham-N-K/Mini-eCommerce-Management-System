@@ -167,6 +167,18 @@
                 <button id="order-submit">Submit Order</button>
             </div>
         </div>
+        <script>
+            // Function to handle order submission
+            function submitOrder() {
+                // Perform any necessary actions for submitting the order here
+
+                // Redirect to a new HTML page
+                window.location.href = "dashbord.html"; // Change "new_page.html" to the desired page
+            }
+
+            // Add event listener to the submit order button
+            document.getElementById("order-submit").addEventListener("click", submitOrder);
+        </script>
 
         <script src="ceaft.js"></script>
 </body>
